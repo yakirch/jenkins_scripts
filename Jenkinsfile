@@ -1,6 +1,6 @@
-node {
-   echo 'Hello World'
-
-   echo "just a script"
-   
+node('ec2_linux'){
+    currentBuild.result = "SUCCESS"
+    stage('Printing hello world'){
+        sh 'echo "Hello World"'
+    }
 }
